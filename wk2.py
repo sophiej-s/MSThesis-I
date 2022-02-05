@@ -12,7 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import nltk
 
-path_to_file='/Users/sophie/Desktop/Recommenders/CSE158/4/amazon_reviews_us_Toys_v1_00.tsv'
+path_to_file='/amazon_reviews_us_Toys_v1_00.tsv'
 
 # data = pd.read_csv(path_to_file, delim_whitespace=True)
 
