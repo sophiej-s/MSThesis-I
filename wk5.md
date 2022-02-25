@@ -1,10 +1,10 @@
 ## Topic Modeling using Tf-idf and Latent Dirichlet Allocation 
 
 
-A small sample (2K reviews in totala) was pre-processed by removing the strings indicating breaks  (```<br>```) and numeric characters, lemmatizing (NLTK WordNetLemmatizer) and stemming (NLTK PorterStemmer).
+A small sample (2K reviews in total) was pre-processed by removing the strings indicating breaks  (```<br>```) and numeric characters, lemmatizing (NLTK WordNetLemmatizer) and stemming (NLTK PorterStemmer).
 
 
-The TF-IDF method was applied (with a minimum limit for occurences of words set to be 10 reviews) to the data followed by the sklearn's LDA (the learning method was set to 'batch') to model the topics.
+The TF-IDF method was applied (with a minimum limit for occurrences of words set to be 10 reviews) to the data followed by the sklearn's LDA (the learning method was set to 'batch') to model the topics.
 Five topics (top 50 words per each) were identified on the whole set as follows:
 
 ````
@@ -24,18 +24,19 @@ Five topics (top 50 words per each) were identified on the whole set as follows:
 # piec use puzzl like plastic togeth look qualiti toy make box time play set product good littl work disappoint come realli kid cheap great game easili son figur apart tri fun fall hard hold thing child way nice broke need love stay fit model kit purchas buy better howev came
 
 ````
-Given the data set is for reviews of toys,  possible topic-level identifiers  based on the above data are as follows:
-* Topic 0 is probably centered on reviews of toys for smaller children (possibly gifted by older relatives) due to the following words: babi, child, year, old, granddaught, grandson, grand, niece, age
+Given the data set is for reviews of toys, possible topic-level identifiers based on the above data are as follows: 
 
-* Topic 1 can be summarized as revies of shipping (ship, receive, deliveri) and notes as to the good qualities of the products
+* Topic 0 is probably centered on reviews of toys for smaller children (possibly gifted by older relatives) due to the following words: ````babi, child, year, old, granddaught, grandson, grand, niece, age````
 
-* Topic 2 is probably for toy costumes and reviews of the fit of those based on the following: smaller, small, size, fit, mask, bigger, costum, wear, dress
+* Topic 1 can be summarized as revies of shipping (````ship, receive, deliveri````) and notes as to the good qualities of the products
 
-* Topic 3 is probably for reviews that complain about returns (return, disappoint) due to product deficiencies (cheap, broke, broken, junk)
+* Topic 2 is probably for toy costumes and reviews of the fit of those based on the following: ````smaller, small, size, fit, mask, bigger, costum, wear, dress````
 
-* Topic 4 is probably for puzzles (or possibly more broadly for board games) and reviews noting good quality (good, easili, fun, nice, ) and an affordable pice (cheap)
+* Topic 3 is probably for reviews that complain about returns (````return, disappoint````) due to product deficiencies (````cheap, broke, broken, junk````)
 
-Performing a TSNE transformation to 3D (from 5D) and mapping the data reveals spacial separation of the topics.
+* Topic 4 is probably for puzzles (or possibly more broadly for board games) and reviews noting good quality (````good, easili, fun, nice````) and an affordable pice (````cheap````)
+
+Performing a TSNE transformation to 3D (from 5D) and mapping the data reveals spatial separation of the topics.
 ![FIG1](https://user-images.githubusercontent.com/20401990/155641352-0cc656aa-8a1a-4dfa-bb3e-7d9cff86d1a0.png)
 
 
@@ -104,7 +105,7 @@ Taking a larger sub-set of the data (60K per each sentiment), we observe the TSN
 ![TSNE-60K-2](https://user-images.githubusercontent.com/20401990/155641347-f9ea91b3-9d72-4e26-9965-189b5f0a290a.png)
 ![TSNE-60KEACH](https://user-images.githubusercontent.com/20401990/155641349-361c2df7-4b03-461a-81b2-80cfc5c34bb4.png)
 
-The topic modeling is less clear (also) compared to examining a smaller set of only one sentiment at a time.
+The topic modeling using the learger data set is less obvious compared to examining a smaller set of only one sentiment at a time.
 
 ````
 # Topic0
