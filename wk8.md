@@ -1,10 +1,9 @@
-# MSThesis-I
+# Design #1. 
 
+## Result using a bigger data set size
 Toy Dataset. Topic Modeling // 100K (R=1) and 100K (R=5) following the design from the previous week
 -Unable to perform SVM on a 160 K sample  (80K (R=1) and 80K (R=5)) on the local host
 -Able to replicated the behaviour seen in the previous week using a 20K sample (10K (R=1) and 10K (R=5))
-
-
 
 
 ````
@@ -74,7 +73,7 @@ An MLPClassifier model using the embeddings+ mean distances (euclidean, minkowsk
 
 `````
 
-# Cross-Category testing
+## Cross-Category testing
 
 Using the previously obtained topics, we obtain a 20K sample (10K (R=1) and 10K (R=5)) from a new data set--Baby products. 
 We find two things:
